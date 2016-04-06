@@ -1,0 +1,39 @@
+<ion-view view-title="Profile">
+    <ion-content class="has-header">
+        <div class="list card">
+        <label class="item item-input item-floating-label">
+          <span class="input-label">Nome</span>
+          <input type="text"  placeholder="Nome" ng-model="user.name">
+        </label>
+        <label class="item item-input item-floating-label">
+          <span class="input-label">Email</span>
+          <input type="email"  placeholder="Email" ng-model="user.email" >
+        </label>
+        <label class="item item-input item-floating-label">
+          <span  class="input-label">Senha</span>
+          <input type="password" placeholder="senha" ng-model="user.senha">
+        </label>
+        <label class="item item-input item-floating-label">
+          <span class="input-label">Cidade</span>
+          <input type="text"  placeholder="Cidade" ng-model="user.location.name">
+        </label>
+        <label class="item item-input item-floating-label">
+          <span class="input-label">CPF</span>
+          <input type="number"  placeholder="CPF" ng-model="user.cpf">
+        </label>
+        <label class="item item-input item-floating-label">
+          <span class="input-label">Telefone</span>
+          <input type="number"  placeholder="Telefone" ng-model="user.telefone">
+        </label>
+        <label class="item item-input item-floating-label">
+          <span class="input-label">Aniversário</span>
+          <input type="date"  placeholder="Aniversário" ng-model="user.birthday">
+        </label>
+            
+            <!-- <div class="item item-body">
+                <img src="http://graph.facebook.com/{{user.id}}/picture?width=270&height=270"/>
+            </div> -->
+        </div>
+    <button class="button button-block button-positive" ng-click="insertUser()">Registrar </button>
+    </ion-content>
+</ion-view>

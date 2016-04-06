@@ -1,0 +1,52 @@
+  <ion-header-bar>
+    <h1 class="title">Login</h1>
+    <div class="buttons">
+      <button class="button button-clear" ng-click="closeLogin()">Close</button>
+    </div>
+  </ion-header-bar>
+  <ion-content>
+    <form >
+      <div class="list">
+        <label class="item item-input">
+          <span class="input-label">Username</span>
+          <input type="text" ng-model="loginData.nome">
+        </label>
+        <label class="item item-input">
+          <span class="input-label">Password</span>
+          <input type="password" ng-model="loginData.senha">
+        </label>
+        <label class="item">
+          <button class="button button-block button-positive" ng-click="login()" type="submit">Log in</button>
+        </label>
+      </div>
+    </form>
+    <label class="item">
+    <button class="button button-block button-positive" ng-click="fbLogin()">
+    Login with Facebook
+    </button>
+  </label>
+<!--   <div class="card">
+    <div class="card-wrap">
+      <div class="profile_pic-wrap">
+        <img src="https://d13yacurqjgara.cloudfront.net/users/525412/screenshots/2025834/profile-card.gif" alt="" />
+      </div>
+      <div class="info-wrap">
+        <h1 class="user-name">Bauru 10</h1>
+        <p class="user-title">Bauru Grande + Batata média + Refrigerante Fruki Lata</p>
+      </div>
+      <div class="find_me-wrap">
+      <p class="find-me">Find me on...</p>
+        <div class="icon-wrap">
+          <a href="www.twitter.com/adamleithp" class="font-social-twitter"></a>
+          <a href="#" class="font-social-facebook"></a>
+          <a href="dribbble.com/adamleithp" class="font-social-dribbble"></a>
+          <a href="mailto:adamleithp@me.com" class="font-social-email"></a>
+        </div>
+     </div>
+   </div>
+</div> -->
+
+
+
+  </ion-content>
+

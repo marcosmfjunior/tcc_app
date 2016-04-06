@@ -1,0 +1,86 @@
+<ion-view view-title="">
+  <ion-content overflow-scroll='false' delegate-handle="userDetailContent" on-scroll="onUserDetailContentScroll()" header-shrink scroll-event-interval="5">
+      <div class="about-header">
+          <ion-slide-box auto-play="false" show-pager="false">
+            <ion-slide>
+            <div class="profile-media">
+              <div class="profile-details">
+                <img  ng-src="{{oferta.logo}}" class="img-circle profile-image">
+                <h4 class="color-white">
+                  {{oferta.nome}}
+                </h4>
+              </div>
+              <img ng-src="{{oferta.imagem}}" class="about-image profile-background-image" style="vertical-align:middle;">
+            </div>
+            </ion-slide>
+          </ion-slide-box>
+        <div class="row like-btn">
+          <div class="col text-right">
+            <button class="button button-assertive" ng-click="getCupom(oferta._id,user.id)">
+			  Resgatar
+			</button>
+          </div>
+        </div>
+    </div>
+    <div class="content-block">
+      <div class="content-block-inner">
+       <div class="row" >
+		  <calendario>
+		    <div class="cabecalho">
+		      <div class="dia">SEG</div>
+		    </div>		    
+		    <div ng-class="diaValido(1)"></div>
+		  </calendario>
+		  <calendario>
+		    <div class="cabecalho">
+		      <div class="dia">TER</div>
+		    </div>
+		    <div ng-class="diaValido(2)"></div>
+		  </calendario>
+		  <calendario>
+		    <div class="cabecalho">
+		      <div class="dia">QUA</div>
+		    </div>
+		    <div ng-class="diaValido(3)"></div>
+		  </calendario>
+		  <calendario>
+		    <div class="cabecalho">
+		      <div class="dia">QUI</div>
+		    </div>
+		    <div ng-class="diaValido(4)"></div>
+		  </calendario>
+		  <calendario>
+		    <div class="cabecalho">
+		      <div class="dia">SEX</div>
+		    </div>
+		    <div ng-class="diaValido(5)"></div>
+		  </calendario>
+		  <calendario>
+		    <div class="cabecalho">
+		      <div class="dia">SAB</div>
+		    </div>
+		    <div ng-class="diaValido(6)"></div>
+		  </calendario>
+		  <calendario>
+		    <div class="cabecalho">
+		      <div class="dia">DOM</div>
+		    </div>
+		    <div ng-class="diaValido(7)"></div>
+		  </calendario>
+		</div>
+        
+       
+        
+		<p class="card padding">
+			{{oferta.descricao}}
+        </p>
+        <p class="card padding">                  
+          <b>Estabelecimento</b>: {{oferta.empresa}}
+          <br>
+		  <b>Válido até</b>: {{oferta.validade | converteData}}			
+		  <br>
+          <b>Regra</b>: {{oferta.desconto.descricao}}
+        </p>
+      
+    </div>
+</ion-view>

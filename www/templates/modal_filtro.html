@@ -1,0 +1,23 @@
+ <div class="modal">
+    <ion-header-bar>
+       <button class="button button-icon ion-android-close" ng-click="closeModal()"></button>
+      <h1 class="title">Filtar Ofertas</h1>
+    </ion-header-bar>
+    <ion-content>
+    <div class="list">
+         <ion-toggle ng-model="ofertasDeHoje" ng-change="toggleAltera()" toggle-class="toggle-calm">
+         Apenas ofertas válidas para hoje          
+        </ion-toggle>
+      <div class="item item-divider">
+          Categorias
+        </div>
+        <ion-list>
+          <div ng-repeat="categoria in categoriasDisponivel">
+             <ion-checkbox ng-model="categoriasDisponivel[$index].mostra" ng-checked="categoriasDisponivel[$index].mostra">{{categoria.nome}}</ion-checkbox>            
+          </div>
+          <!-- <ion-checkbox ng-model="categorias.alimentacao" ng-checked="true">Alimentação</ion-checkbox>
+          <ion-checkbox ng-model="categorias.lazer" ng-checked="true">Entretenimento/Lazer</ion-checkbox>
+          <ion-checkbox ng-model="categorias.hospedagem" ng-checked="true">Hospedagem</ion-checkbox> -->
+        </ion-list>
+    </ion-content>
+  </div>

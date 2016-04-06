@@ -1,0 +1,41 @@
+<ion-view view-title="Ofertas">
+<ion-nav-buttons side="right">
+      <button class="button button-icon icon ion-gear-a" ng-click="abreFiltro()"></button>
+    </ion-nav-buttons>
+  <ion-content>
+<div ng-repeat="oferta in ofertas | OfertasFilter:ofertasDeHoje:categoriasDisponivel" >
+<!-- | OfertasFilter:ofertasDeHoje:categorias -->
+  <div class="card" ng-click="verOferta(oferta._id)">
+      <header>
+          <div class="bio">
+            <img ng-src="{{oferta.imagem}}" alt="background" class="Ofertas ng-class: oferta.categoria;">
+          </div>
+          
+          <div class="avatarcontainer">
+              <img ng-src="{{oferta.logo}}" alt="avatar" class="ng-class: oferta.categoria;">              
+          </div>
+      </header>
+      <div class="content" >        
+        <span>{{oferta.empresa}}</span>
+        <div class="list">
+          <a class="item item-text-wrap item-oferta" href="#">
+            <h3>{{oferta.nome}}</h3>
+          </a>
+          <a class="item item-text-wrap item-icon-left item-oferta" href="#">
+            <i class="icon ion-calendar"></i>
+            <p>Validade</p>
+            <h2>{{oferta.validade | converteData}}</h2>            
+          </a>
+          <a class="item item-text-wrap item-icon-left item-oferta" href="#">
+            <i class="icon ion-ios-pricetag"></i>
+            <p>Desconto</p>
+            <h2>{{oferta.desconto.nome}}</h2>            
+          </a>
+        </div>
+  	</div>
+  </div>
+</div>
+	
+
+  </ion-content>
+</ion-view>

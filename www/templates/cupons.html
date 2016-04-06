@@ -1,0 +1,33 @@
+<ion-view view-title="Meus Cupons">
+  <ion-content>
+  	<div ng-repeat="cupom in cupons" > 
+
+	 	<div class="list card">
+		 	<div class="ribbon-wrapper-green" ng-show="cupom.usado">
+		 		<div class="ribbon-green">CUPOM UTILIZADO</div>
+		 	</div>
+			<ul class="row" align="center">
+			  <li class="col-25">
+			  	<div class="item item-image">
+			    	<img ng-src="{{cupom.oferta.logo}}">
+			    </div>
+			    	{{cupom.oferta.empresa}}
+			   </li>
+			    <li class="col-75">
+			  	  <h5 align="center" style="white-space: normal !important">{{cupom.oferta.nome}}</h5>
+				    <p align="center" >
+			               <span  >Válido até</span>
+			               {{cupom.oferta.validade  | converteData}}
+			              <span>Desconto</span>
+			              {{cupom.oferta.desconto.nome}}                       
+					    <button class="button button-block button-assertive ">
+						  {{cupom.codigo}}
+						</button>
+					</p>			    
+				</li>
+			</ul>	
+		</div>
+	</div>
+	
+  </ion-content>
+</ion-view>
